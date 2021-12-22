@@ -1,0 +1,49 @@
+1. How do decision trees work?
+    - Classification tree learns a sequence of if then questions with
+      each question involving one feature and one split point.
+      The value between the nodes is called a split point.
+      A good value (one that results in largest information gain) for a split
+      point is one that does a good job of separating one class from the others.
+
+2. What is the difference between a decision tree and a random forest?
+    - Involves multiple decision trees, each fit on a subset
+      of the features and a bootstrapped sample of the data.
+
+3. What is bootstrapping?
+    - A sampling with replacement.
+
+4. What is bagging?
+    - Bootstrap aggregating - it is when multiple models
+      are fit on many bootstrapped samples of the data.
+
+5. Why might a random forest be better than a decision tree?
+    - Random forests are less prone to overfitting than a single decision tree.
+
+6. What is training data and what is it used for?
+    - Training data is a set of examples that will be used to train the
+      machine learning model.
+
+7. What is a test set and why use one?
+    - A test set is a set of data not used during training.
+      The model's performance is evaluated on the test set to predict how
+      well it will generalize to new data.
+
+8. What is cross validation and why is it useful?
+    - Cross validation is a technique for more accurately training and validating models.
+      It rotates what data is held out from model training to be used as the validation data.
+      Several models are trained and evaluated, with every piece of data being held
+      out from one model. The average performance of all the models is then calculated.
+
+9. What are the main hyperparameters that you can tune for decision trees?
+    - max depth - maximum tree depth
+    - min samples split - minimum number of samples for a node to be split
+    - min samples leaf - minimum number of samples for each leaf node
+    - max leaf nodes - the maximum number of leaf nodes in the tree
+    - max features - maximum number of features that are evaluated for splitting at each node (only valid for algorithms that randomize features considered at each split)
+
+10. What are some ways to reduce overfitting with decision trees?
+    - Reduce maximum depth
+    - Increase min samples split
+    - Balance your data to prevent bias toward dominant classes
+    - Increase the number of samples
+    - Decrease the number of features
